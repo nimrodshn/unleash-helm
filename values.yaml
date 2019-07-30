@@ -25,3 +25,7 @@ podAnnotations: {}
 resources: {}
 
 nodeSelector: {}
+
+postgresqlUsername: postgres
+postgresqlPassword: 1234
+postgresqlDatabase: unleash

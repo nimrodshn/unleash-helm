@@ -16,3 +16,6 @@ spec:
         - name: {{ template "unleash.name" . }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: DATABASE_URL
+              value: postgres://postgres:1234@{{ template "postgres.fullname"  }}:5432/unleash
