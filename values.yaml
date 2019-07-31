@@ -26,6 +26,10 @@ resources: {}
 
 nodeSelector: {}
 
-postgresqlUsername: postgres
-postgresqlPassword: 1234
-postgresqlDatabase: unleash
+# values for postgresql chart.
+postgresql:
+  postgresqlUsername: postgres
+  postgresqlPassword: 1234
+  postgresqlDatabase: unleash
+  service:
+    clusterIP: 10.96.0.2

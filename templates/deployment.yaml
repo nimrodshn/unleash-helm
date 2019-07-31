@@ -18,4 +18,4 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: DATABASE_URL
-              value: postgres://postgres:1234@{{ template "postgres.fullname"  }}:5432/unleash
+              value: postgres://{{ .Values.postgresql.postgresqlUsername }}:{{ .Values.postgresql.postgresqlPassword }}@{{ .Values.postgresql.service.clusterIP }}:5432/unleash
