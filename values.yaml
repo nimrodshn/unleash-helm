@@ -10,22 +10,6 @@ image:
   tag: 3.1
   pullPolicy: IfNotPresent
 
-service:
-  annotations: {}
-  clusterIP: ""
-  externalIPs: []
-  loadBalancerIP: ""
-  loadBalancerSourceRanges: []
-  type: ClusterIP
-  port: 8888
-  nodePort: ""
-
-podAnnotations: {}
-
-resources: {}
-
-nodeSelector: {}
-
 # values for postgresql chart.
 postgresql:
   postgresqlUsername: postgres
